@@ -1,0 +1,133 @@
+input[type="text"], input[type="url"] {
+	width: 300px;
+	border-radius: 3px;
+}
+textarea {
+	width: 300px;
+	min-height: 100px;
+
+}
+
+.countdown-output {
+	text-align: center;
+}
+#countdowntitle {
+    font-size: 2em;
+    border-bottom: 1px solid lightgrey;
+}
+
+#coutdowntimer {
+	font-weight: 700;	
+}
+#daysBox {
+	padding: 10px;
+	margin-left: 20px;
+	margin: auto;
+}
+
+#hoursBox {
+	padding: 10px;
+}
+
+#minsBox {
+	padding: 10px;
+}
+
+#secsBox {
+	padding: 10px;
+}
+#shortcode-name {
+	background: white;
+    width: 125px;
+    padding: 20px;
+    box-shadow: 2px 2px 2px #a29898;
+}
+#shortcode-label {
+    background: #fff;
+    padding: 20px ;
+    font-weight: 700;
+    font-size: 16px;
+
+
+}
+/*
+****** Slider Button *******
+*/
+.onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #34A7C1; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+    height: 18px;
+    position: absolute; 
+    top: 18px;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.onoffswitch-checkbox {
+  visibility: hidden;
+}
+.onoffswitch {
+  position: relative;
+  bottom: 20px;
+}
+
+/*
+Range
+
+*/
+#slider_countdown, #slider_title, #slider_desc, #slider_container {
+    top: -9px;
+    position: relative;
+}

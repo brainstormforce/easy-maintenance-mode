@@ -1,0 +1,68 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+  border-radius: 5px;
+}
+
+html, body {
+  min-height: 100%; 
+}
+
+body {
+  background: url("../images/pattern.jpeg");
+  font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  text-align: center; 
+}
+
+#container {
+  background: transparent;
+  margin: 5em auto;
+  max-width: 60%;
+  padding: 2em; 
+  min-height: 500px;
+}
+
+h1 {
+  color: #B96C6E;
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: normal;
+  margin: 20px 0 .5em;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0 0 20px; 
+}
+
+a {
+  text-decoration: none;
+  margin: 20px;
+}
+.fa-facebook-official {
+  color: #3b5998;
+}
+.fa-twitter {
+  color: #1DA1F2;
+}
+.fa-youtube-play {
+  color: #D82423;
+}
+.fa-linkedin {
+  color: #007BB6;
+}
+.fa-google-plus {
+  color: #DC4A38;
+}
+.countdown-label {
+  font-size: 10px;
+  position: relative;
+  top: 20px;
+  right: 80px;
+}
+#daysBox, #hoursBox, #minsBox, #secsBox {
+  font-size: 100px;
+  font-family: tahoma;
+}
