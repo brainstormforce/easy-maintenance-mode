@@ -2,7 +2,7 @@
 /**
  * Maintenance mode template.
  *
- * @package   Countdown
+ * @package   Easy Maintenance Mode
  * @since   1.0
  */
 ?>
@@ -16,6 +16,9 @@
 
 	<title>Down for Maintenance | <?php echo esc_html( get_bloginfo( 'name' ) ); ?></title>
 	<style type="text/css">
+		body {
+			background: url(<?php echo esc_html( get_option( 'maintenance_mode_image' ) ) ?> ) ;
+		}
 		.title-style-handler {
 			color: <?php echo esc_html( get_option( 'maintenance_mode_title_color' ) ) ?>;
 			font-size: <?php echo esc_html( get_option( 'maintenance_mode_title_size' ) ) ?>px;
@@ -23,14 +26,18 @@
 		.desc-style-handler {;
 			color: <?php echo esc_html( get_option( 'maintenance_mode_desc_color' ) ) ?>;
 			font-size: <?php echo esc_html( get_option( 'maintenance_mode_desc_size' ) ) ?>px;
-
 		}
 		.countdown-output {
 			color: <?php echo esc_html( get_option( 'maintenance_mode_countdown_color' ) ) ?>;
-			font-size: <?php echo esc_html( get_option( 'maintenance_mode_countdown_size' ) ) ?>px;
 		}
 		#container {
 			opacity: <?php echo esc_html( get_option( 'maintenance_mode_container_opacity' ) ) ?>;
+		}
+		#daysBox, #hoursBox, #minsBox, #secsBox {
+			font-size: <?php echo esc_html( get_option( 'maintenance_mode_countdown_size' ) ) ?>px;
+			font-family: tahoma;
+			position: relative;
+			top: 10px;
 		}
 
 	</style>
@@ -76,10 +83,9 @@
 
 <div id="container">
 	<header>
-		<h1><u><?php echo esc_html( get_bloginfo( 'name' ) ); ?></u></h1>
-		<h3 class="title-style-handler"><?php echo esc_html( get_option( 'maintenance_mode_title' ) ); ?></h3>
+		<img src="<?php echo esc_html( get_option( 'maintenance_mode_image_logo' ) ); ?>" width="300" height="100px"></img>
 	</header>
-
+	<h3 class="title-style-handler"><?php echo esc_html( get_option( 'maintenance_mode_title' ) ); ?></h3>
 	<main>
 		<p class="desc-style-handler"><?php echo esc_html( get_option('maintenance_mode_desc') ); ?></p>
 	</main>
@@ -97,19 +103,19 @@
 	<br />
 	<br />
 	<a href="<?php echo esc_url( get_option('mm_social_media_facebook') ) ?>" target="_blank"">
-		<i class="fa fa-facebook-official" aria-hidden="true"></i>
+		<i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
 	</a>
 	<a href="<?php echo esc_url( get_option('mm_social_media_twitter') ) ?>" target="_blank"">
-		<i class="fa fa-twitter" aria-hidden="true"></i>
+		<i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
 	</a>
 	<a href="<?php echo esc_url( get_option('mm_social_media_youtube') ) ?>" target="_blank"">
-		<i class="fa fa-youtube-play" aria-hidden="true"></i>
+		<i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
 	</a>
 	<a href="<?php echo esc_url( get_option('mm_social_media_linkedin') ) ?>" target="_blank"">
-		<i class="fa fa-linkedin" aria-hidden="true"></i>
+		<i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
 	</a>
 	<a href="<?php echo esc_url( get_option('mm_social_media_googleplus') ) ?>" target="_blank"">
-		<i class="fa fa-google-plus" aria-hidden="true"></i>
+		<i class="fa fa-google-plus fa-2x" aria-hidden="true"></i>
 	</a>
 </div>
 

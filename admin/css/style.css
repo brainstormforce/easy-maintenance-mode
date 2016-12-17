@@ -7,7 +7,9 @@ textarea {
 	min-height: 100px;
 
 }
-
+.text-color {
+    visibility: hidden;
+}
 .countdown-output {
 	text-align: center;
 }

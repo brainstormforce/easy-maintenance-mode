@@ -10,7 +10,6 @@ html, body {
 }
 
 body {
-  background: url("../images/pattern.jpeg");
   font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 18px;
   text-align: center; 
@@ -18,10 +17,14 @@ body {
 
 #container {
   background: transparent;
-  margin: 5em auto;
+  margin: 10px auto;
   max-width: 60%;
   padding: 2em; 
   min-height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 h1 {
@@ -57,12 +60,8 @@ a {
   color: #DC4A38;
 }
 .countdown-label {
-  font-size: 10px;
+  font-size: 12px;
   position: relative;
-  top: 20px;
-  right: 80px;
-}
-#daysBox, #hoursBox, #minsBox, #secsBox {
-  font-size: 100px;
-  font-family: tahoma;
+  top: 30px;
+  right: 77px;
 }
