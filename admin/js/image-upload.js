@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
             // Output to the console uploaded_image
             console.log(uploaded_image);
             var image_url = uploaded_image.toJSON().url;
-            // Let's assign the url value to the input field
+            // Let's assign the url value to the field
             $('#image_url').val(image_url);
         });
     });
@@ -31,7 +31,7 @@ jQuery(document).ready(function($){
             // Output to the console uploaded_image
             console.log(uploaded_image);
             var image_url = uploaded_image.toJSON().url;
-            // Let's assign the url value to the input field
+            // Let's assign the url value to the field
             $('#image_logo_url').val(image_url);
         });
     });

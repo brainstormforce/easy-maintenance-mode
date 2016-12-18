@@ -18,13 +18,12 @@ body {
 #container {
   background: transparent;
   margin: 10px auto;
-  max-width: 60%;
+  max-width: 50%;
   padding: 2em; 
-  min-height: 500px;
   position: absolute;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  left: 50%;
+  transform: translate( -50%, -50% );
 }
 
 h1 {
@@ -44,24 +43,30 @@ a {
   text-decoration: none;
   margin: 20px;
 }
-.fa-facebook-official {
-  color: #3b5998;
+.fa-facebook {
+  color: #fff;
 }
 .fa-twitter {
-  color: #1DA1F2;
+  color: #fff;
 }
 .fa-youtube-play {
-  color: #D82423;
+  color: #fff;
 }
 .fa-linkedin {
-  color: #007BB6;
+  color: #fff;
 }
 .fa-google-plus {
-  color: #DC4A38;
+  color: #fff;
 }
 .countdown-label {
   font-size: 12px;
   position: relative;
   top: 30px;
-  right: 77px;
+  right: 65px;
+}
+.social-icons-container {
+  margin-top: 40px;
+}
+[href=""] {
+    display: none;
 }

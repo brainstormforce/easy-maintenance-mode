@@ -192,7 +192,7 @@ class Admin_Settings {
                     <th scope="row"> Select Logo </th>
                     <td>
                         <input type="hidden" name="maintenance_mode_image_logo" id="image_logo_url" class="regular-text" value="<?php echo esc_attr( get_option('maintenance_mode_image_logo') ) ?>">
-                        <input type="button" name="upload-btn" id="upload-logo" class="button-secondary" value="Upload Image">
+                        <input type="button" name="upload-logo" id="upload-logo" class="button-secondary" value="Upload Logo">
                         
                     </td>
                     </tr>
@@ -216,28 +216,28 @@ class Admin_Settings {
                     <th scope="row"> Select Background Image </th>
                     <td>
                         <input type="hidden" name="maintenance_mode_image" id="image_url" class="regular-text" value="<?php echo esc_attr( get_option('maintenance_mode_image') ) ?>">
-                        <input type="button" name="upload-btn" id="upload-btn" class="button-secondary" value="Upload Image">
+                        <input type="button" name="upload-btn" id="upload-btn" class="button-secondary" value="Upload Background Image">
                         
                     </td>
                     </tr>
 
                     <tr valign="top">
-                    <th scope="row"> Select Title Font Size </th>
-                        <td><input width="400" type="range" min="12" max="100" name="maintenance_mode_title_size" value="<?php echo esc_attr( get_option('maintenance_mode_title_size') ) ?>"" onchange="show_title(this.value);">
+                    <th scope="row"> Select Title Size </th>
+                        <td><input width="400" type="range" min="12" max="100" name="maintenance_mode_title_size" value="<?php echo esc_attr( get_option('maintenance_mode_title_size') ) ?>" onchange="show_title(this.value);">
                             <span id="slider_title" style="color:red;"></span>
                         </td>
                     </tr>
 
                     <tr valign="top">
-                    <th scope="row"> Select Countdown Font Size </th>
-                        <td><input width="400" type="range" min="12" max="100" name="maintenance_mode_desc_size" value="<?php echo esc_attr( get_option('maintenance_mode_desc_size') ) ?>"" onchange="show_description(this.value);">
+                    <th scope="row"> Select Description Size </th>
+                        <td><input width="400" type="range" min="12" max="100" name="maintenance_mode_desc_size" value="<?php echo esc_attr( get_option('maintenance_mode_desc_size') ) ?>" onchange="show_description(this.value);">
                             <span id="slider_desc" style="color:red;"></span>
                         </td>
                     </tr>
 
                     <tr valign="top">
                     <th scope="row"> Select Countdown Font Size </th>
-                        <td><input width="400" type="range" min="12" max="100" name="maintenance_mode_countdown_size" value="<?php echo esc_attr( get_option('maintenance_mode_countdown_size') ) ?>"" onchange="show_countdown(this.value);">
+                        <td><input width="400" type="range" min="12" max="100" name="maintenance_mode_countdown_size" value="<?php echo esc_attr( get_option('maintenance_mode_countdown_size') ) ?>" onchange="show_countdown(this.value);">
                             <span id="slider_countdown" style="color:red;"></span>
                         </td>
                     </tr>
@@ -260,28 +260,28 @@ class Admin_Settings {
 
                     <tr valign="top">
                     <th scope="row"> Facebook Page Link</th>
-                    <td><input type="url" name="mm_social_media_facebook" id="show_facebook" value="<?php echo esc_attr( get_option('mm_social_media_facebook') ) ?>" required>
+                    <td><input type="url" name="mm_social_media_facebook" id="show_facebook" value="<?php echo esc_attr( get_option('mm_social_media_facebook') ) ?>" >
                     </td>
 
                     </tr>
                     <tr valign="top">
                     <th scope="row"> Twitter Page Link</th>
-                    <td><input type="url" name="mm_social_media_twitter" id="show_twitter" value="<?php echo esc_attr( get_option('mm_social_media_twitter') ) ?>" required></td>
+                    <td><input type="url" name="mm_social_media_twitter" id="show_twitter" value="<?php echo esc_attr( get_option('mm_social_media_twitter') ) ?>" ></td>
                     </tr>
 
                     <tr valign="top">
                     <th scope="row"> Youtube Page Link</th>
-                    <td><input type="url" name="mm_social_media_youtube" id="show_instagram" value="<?php echo esc_attr( get_option('mm_social_media_youtube') ) ?>" required></td>
+                    <td><input type="url" name="mm_social_media_youtube" id="show_instagram" value="<?php echo esc_attr( get_option('mm_social_media_youtube') ) ?>" ></td>
                     </tr>
 
                     <tr valign="top">
                     <th scope="row"> LinkedIn Page Link</th>
-                    <td><input type="url" name="mm_social_media_linkedin" id="show_linkedin" value="<?php echo esc_attr( get_option('mm_social_media_linkedin') ) ?>" required></td>
+                    <td><input type="url" name="mm_social_media_linkedin" id="show_linkedin" value="<?php echo esc_attr( get_option('mm_social_media_linkedin') ) ?>" ></td>
                     </tr>
 
                     <tr valign="top">
                     <th scope="row"> Google Plus Page Link</th>
-                    <td><input type="url" name="mm_social_media_googleplus" id="show_googleplus" value="<?php echo esc_attr( get_option('mm_social_media_googleplus') ) ?>" required></td>
+                    <td><input type="url" name="mm_social_media_googleplus" id="show_googleplus" value="<?php echo esc_attr( get_option('mm_social_media_googleplus') ) ?>" ></td>
                     </tr>
 
                 </table>
