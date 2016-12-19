@@ -165,16 +165,16 @@ input:checked + .slider:before {
     top: -6px;
  }
  input[type="range"] {
-  -webkit-appearance: none;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  width: 300px;
-  height: 20px;
-  margin: 0;
   border: none;
-  padding: 1px 2px;
   border-radius: 14px;
   background: #d9d9d9;
+  height: 20px;
+  margin: 0;
   outline: none; /* no focus outline */
+  padding: 1px 2px;
+  width: 300px;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 input[type="range"]::-moz-range-track {
@@ -184,8 +184,8 @@ input[type="range"]::-moz-range-track {
 
 input[type="range"]::-ms-track {
   border: inherit;
-  color: transparent; /* don't drawn vertical reference line */
   background: transparent;
+  color: transparent; /* don't drawn vertical reference line */
 }
 
 input[type="range"]::-ms-fill-lower,
@@ -200,29 +200,29 @@ input[type="range"]::-ms-tooltip {
 /* thumb */
 
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 40px;
-  height: 18px;
-  border: none;
-  border-radius: 12px;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #008ec2), color-stop(100%, #245e8f)); /* android <= 2.2 */
   background-image: -webkit-linear-gradient(top , #008ec2 0, #245e8f 100%); /* older mobile safari and android > 2.2 */;
   background-image: linear-gradient(to bottom, #008ec2 0, #245e8f 100%); /* W3C */
-}
-input[type="range"]::-moz-range-thumb {
-  width: 40px;
-  height: 18px;
   border: none;
   border-radius: 12px;
+  height: 18px;
+  width: 40px;
+  -webkit-appearance: none;
+}
+input[type="range"]::-moz-range-thumb {
   background-image: linear-gradient(to bottom, #008ec2 0, #245e8f 100%); /* W3C */
+  border: none;
+  border-radius: 12px;
+  height: 18px;
+  width: 40px;
 }
 
 input[type="range"]::-ms-thumb {
-  width: 40px;
-  height: 18px;
-  border-radius: 12px;
-  border: 0;
   background-image: linear-gradient(to bottom, #008ec2 0, #245e8f 100%); /* W3C */
+  border: 0;
+  border-radius: 12px;
+  height: 18px;
+  width: 40px;
 }
 .facebook-stack {
     display: none;
@@ -247,6 +247,32 @@ input[type="range"]::-ms-thumb {
 Preview logo and backgrounf image 
 */
 #upload_logo_preview, #upload_background_preview {
-  position: relative;
   left: 10px;
+  position: relative;
+}
+
+/*
+Easy maintenance settings page
+*/
+
+.wrap {
+  background: #fff;
+  padding: 5px 0 0 20px;
+}
+
+/*
+  wordpress color picker
+*/
+
+.wp-color-result {
+    box-shadow: none !important;
+    -webkit-box-shadow: none;
+}
+/*
+  settings page title
+*/
+.wrap > h2:first-child {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  line-height: 18px !important;
 }

@@ -50,55 +50,22 @@ Function Description: This function will register all the settings
 
         // we register the appearance fields with WordPress
 
-        register_setting( 'maintenance_appearance_setting_group', 'maintenance_mode_image_logo' );
-        register_setting( 'maintenance_appearance_setting_group', 'maintenance_mode_title_color' );
-        register_setting(
-            'maintenance_appearance_setting_group',
-            'maintenance_mode_desc_color'
-        );
-        register_setting(
-            'maintenance_appearance_setting_group',
-            'maintenance_mode_countdown_color'
-        );
-        register_setting(
-            'maintenance_appearance_setting_group',
-            'maintenance_mode_image'
-        );
-        register_setting(
-            'maintenance_appearance_setting_group',
-            'maintenance_mode_title_size'
-        );
-        register_setting(
-            'maintenance_appearance_setting_group',
-            'maintenance_mode_desc_size'
-        );
-        register_setting(
-            'maintenance_appearance_setting_group',
-            'maintenance_mode_countdown_size'
-        );
+        register_setting( 'maintenance_appearance_setting_image', 'maintenance_mode_image_logo' );
+        register_setting( 'maintenance_appearance_setting_color', 'maintenance_mode_title_color' );
+        register_setting( 'maintenance_appearance_setting_color', 'maintenance_mode_desc_color' );
+        register_setting( 'maintenance_appearance_setting_color', 'maintenance_mode_countdown_color' );
+        register_setting( 'maintenance_appearance_setting_image', 'maintenance_mode_image' );
+        register_setting( 'maintenance_appearance_setting_font', 'maintenance_mode_title_size' );
+        register_setting( 'maintenance_appearance_setting_font', 'maintenance_mode_desc_size' );
+        register_setting( 'maintenance_appearance_setting_font', 'maintenance_mode_countdown_size' );
 
         // we register the social media fields with WordPress
 
-        register_setting(
-            'maintenance_social_media_setting_group',
-            'mm_social_media_facebook'
-        );
-        register_setting(
-            'maintenance_social_media_setting_group',
-            'mm_social_media_twitter'
-        );
-        register_setting(
-            'maintenance_social_media_setting_group',
-            'mm_social_media_youtube'
-        );
-            register_setting(
-            'maintenance_social_media_setting_group',
-            'mm_social_media_googleplus'
-        );
-        register_setting(
-            'maintenance_social_media_setting_group',
-            'mm_social_media_linkedin'
-        );
+        register_setting( 'maintenance_social_media_setting_group', 'mm_social_media_facebook' );
+        register_setting( 'maintenance_social_media_setting_group', 'mm_social_media_twitter' );
+        register_setting( 'maintenance_social_media_setting_group', 'mm_social_media_youtube' );
+        register_setting( 'maintenance_social_media_setting_group', 'mm_social_media_googleplus' );
+        register_setting( 'maintenance_social_media_setting_group', 'mm_social_media_linkedin' );
 
     }
 
@@ -130,9 +97,10 @@ Function Description: This fucntion has all the setting that we want to display
             </h2>
              
             
-            <?php settings_errors(); ?>
+           
 
             <form action="options.php" method="post" enctype="multipart/form-data">
+            
             <?php
 
             // Checking if active tab is content_options
@@ -141,7 +109,10 @@ Function Description: This fucntion has all the setting that we want to display
             ?>
             <!-- If active tab is content_options then show Page Settings -->
         <div class="wrap">
+            
             <h2><?php _e('Page Settings', 'easy-maintenance-mode') ?></h2>
+            <?php settings_errors(); ?>
+            <hr />
             <?php settings_fields( 'maintenance_content_setting_group' ); ?>
             <?php do_settings_sections( 'maintenance_content_setting_group' ); ?>
                 <table class="form-table">
@@ -181,6 +152,7 @@ Function Description: This fucntion has all the setting that we want to display
                 </table>
                 <?php submit_button();?>
             </form>
+
         </div>
         <?php 
         }  ?>
@@ -194,14 +166,14 @@ Function Description: This fucntion has all the setting that we want to display
 
             <div class="wrap">
                 <form id="form-maintenance-options" action="options.php" method="post" enctype="multipart/form-data">
-                
-                <h2> <?php _e( 'Appearance Settings', 'easy-maintenance-mode' ) ?> </h2>
-                <?php settings_fields( 'maintenance_appearance_setting_group' ); ?>
-                <?php do_settings_sections( 'maintenance_appearance_setting_group' ); ?>
+                <h2> <?php _e( 'Image Settings', 'easy-maintenance-mode' ) ?> </h2>
+                <hr />
+                <?php settings_fields( 'maintenance_appearance_setting_image' ); ?>
+                <?php do_settings_sections( 'maintenance_appearance_setting_image' ); ?>
                 <?php wp_enqueue_script( 'maintenance_custom_js', plugins_url( 'admin/js/jquery.custom.js', __FILE__ ), array( 'jquery', 'wp-color-picker' ), '', true  ); ?>
            
                     <table class="form-table">
-
+                        
                         <tr valign="top">
                         <th scope="row"> <?php _e( 'Select Logo', 'easy-maintenance-mode' ) ?> </th>
                         <td>
@@ -214,10 +186,30 @@ Function Description: This fucntion has all the setting that we want to display
                         </tr>
 
                         <tr valign="top">
+                        <th scope="row"> <?php _e( 'Select Background Image', 'easy-maintenance-mode' ) ?> </th>
+                        <td>
+                            <input type="hidden" name="maintenance_mode_image" id="image_url" class="regular-text" value="<?php echo esc_attr( get_option('maintenance_mode_image') ) ?>">
+                            <input type="button" name="upload-btn" id="upload-btn" class="button-secondary" value="Upload Background Image">
+                            <img id="upload_background_preview" />
+                            </span>
+                        </td>
+                        </tr>
+                    </table>
+                    <?php submit_button();?>
+
+                </form>
+            </div>           
+            <div class="wrap">
+                <form id="form-maintenance-options" action="options.php" method="post" enctype="multipart/form-data">
+                    <h2 style="margin: 0.7em 0"> <?php _e( 'Color Settings', 'easy-maintenance-mode' ) ?> </h2>
+                    <table class="form-table">
+                    <hr />
+                    <?php settings_fields( 'maintenance_appearance_setting_color' ); ?>
+                    <?php do_settings_sections( 'maintenance_appearance_setting_color' ); ?>
+                        <tr valign="top">
                         <th scope="row"> <?php _e( 'Select Title Color', 'easy-maintenance-mode' ) ?> </th>
                         <td><input type="hidden" name="maintenance_mode_title_color" class="cpa-color-picker text-color" id="show_desc" value="<?php echo esc_attr( get_option('maintenance_mode_title_color') ) ?>" ></td>
                         </tr>
-
                         <tr valign="top">
                         <th scope="row"> <?php _e( 'Select Description Color', 'easy-maintenance-mode' ) ?> </th>
                         <td><input type="hidden" name="maintenance_mode_desc_color" class="cpa-color-picker text-color" id="show_desc" value="<?php echo esc_attr( get_option('maintenance_mode_desc_color') ) ?>" ></td>
@@ -227,18 +219,18 @@ Function Description: This fucntion has all the setting that we want to display
                         <th scope="row"> <?php _e('Select Countdown Color', 'easy-maintenance-mode') ?> </th>
                         <td><input type="hidden" name="maintenance_mode_countdown_color" class="cpa-color-picker  text-color" id="show_desc" value="<?php echo esc_attr( get_option('maintenance_mode_countdown_color') ) ?>" ></td>
                         </tr>
+                </table>
+                    <?php submit_button();?>
 
-                        <tr valign="top">
-                        <th scope="row"> <?php _e( 'Select Background Image', 'easy-maintenance-mode' ) ?> </th>
-                        <td>
-                            <input type="hidden" name="maintenance_mode_image" id="image_url" class="regular-text" value="<?php echo esc_attr( get_option('maintenance_mode_image') ) ?>">
-                            <input type="button" name="upload-btn" id="upload-btn" class="button-secondary" value="Upload Background Image">
-                            <img id="upload_background_preview" />
-                            </span>
-                            
-                        </td>
-                        </tr>
-
+                </form>
+            </div>    
+            <div class="wrap">
+                <form id="form-maintenance-options" action="options.php" method="post" enctype="multipart/form-data">
+                    <h2 style="margin: 0.7em 0"> <?php _e( 'Font Settings', 'easy-maintenance-mode' ) ?> </h2>
+                    <hr />
+                    <?php settings_fields( 'maintenance_appearance_setting_font' ); ?>
+                    <?php do_settings_sections( 'maintenance_appearance_setting_font' ); ?>
+                    <table class="form-table">
                         <tr valign="top">
                         <th scope="row"> <?php _e( 'Select Title Size', 'easy-maintenance-mode' ) ?> </th>
                             <td><input width="400" type="range" min="12" max="100" name="maintenance_mode_title_size" value="<?php echo esc_attr( get_option('maintenance_mode_title_size') ) ?>" onchange="show_title(this.value);">
@@ -275,7 +267,8 @@ Function Description: This fucntion has all the setting that we want to display
         <!-- If active tab is social_media_options then show Social Media Settings -->
         <div class="wrap">
             <form action="options.php" method="post">
-            <h2>Social Media Settings</h2>
+            <h2> <?php _e( 'Social Media Settings', 'easy-maintenance-mode' ) ?> </h2>
+            <hr />
             <?php settings_fields( 'maintenance_social_media_setting_group' ); ?>
             <?php do_settings_sections( 'maintenance_social_media_setting_group' ); ?>
                 <table class="form-table">
