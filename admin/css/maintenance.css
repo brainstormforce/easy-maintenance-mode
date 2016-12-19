@@ -1,31 +1,31 @@
 * {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; 
+  -webkit-box-sizing: border-box;
   border-radius: 5px;
+  box-sizing: border-box;
 }
-
+ 
 html, body {
-  min-height: 100%; 
-}
-
+  min-height: 100%;
+  }
+ 
 body {
   font-family: Lato, 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 18px;
-  text-align: center; 
+  text-align: center;
 }
 
 #container {
   background: transparent;
+  left: 50%;
   margin: 10px auto;
   max-width: 50%;
-  padding: 2em; 
+  padding: 2em;
   position: absolute;
   top: 50%;
-  left: 50%;
   transform: translate( -50%, -50% );
 }
-
+ 
 h1 {
   color: #B96C6E;
   font-family: 'Playfair Display', serif;
@@ -34,39 +34,51 @@ h1 {
   margin: 20px 0 .5em;
   text-transform: uppercase;
 }
-
+ 
 p {
-  margin: 0 0 20px; 
+  margin: 0 0 20px;
+}
+ 
+a {
+  margin: 20px;
+  text-decoration: none;
 }
 
-a {
-  text-decoration: none;
-  margin: 20px;
-}
+/*
+  Social Media Icons
+*/
+
 .fa-facebook {
   color: #fff;
 }
+ 
 .fa-twitter {
   color: #fff;
 }
+ 
 .fa-youtube-play {
   color: #fff;
 }
+ 
 .fa-linkedin {
   color: #fff;
 }
+ 
 .fa-google-plus {
   color: #fff;
 }
+ 
 .countdown-label {
   font-size: 12px;
   position: relative;
-  top: 30px;
   right: 65px;
+  top: 30px;
 }
+ 
 .social-icons-container {
   margin-top: 40px;
 }
+ 
 [href=""] {
-    display: none;
+  display: none;
 }

@@ -1,7 +1,10 @@
 jQuery(document).ready(
     function () {
-    jQuery( ".datepicker" ).datepicker({
-    });
-  }
 
+	    // Add date Picker to all inputs that have 'datepicker' class
+		
+	    jQuery( ".datepicker" ).datepicker({
+	    });
+	}
+	
 );

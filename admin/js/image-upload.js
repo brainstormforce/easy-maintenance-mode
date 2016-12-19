@@ -15,6 +15,11 @@ jQuery(document).ready(function($){
             var image_url = uploaded_image.toJSON().url;
             // Let's assign the url value to the field
             $('#image_url').val(image_url);
+            $('#upload_background_preview').attr('width', '100px');
+            $('#upload_background_preview').attr('height', '50px');            
+            $('#upload_background_preview').attr('src',image_url);
+
+
         });
     });
     $('#upload-logo').click(function(e) {
@@ -33,6 +38,11 @@ jQuery(document).ready(function($){
             var image_url = uploaded_image.toJSON().url;
             // Let's assign the url value to the field
             $('#image_logo_url').val(image_url);
+            $('#upload_logo_preview').attr('width', '100px');
+            $('#upload_logo_preview').attr('height', '50px'); 
+            $('#upload_logo_preview').attr('src',image_url);
+
         });
     });
+
 });

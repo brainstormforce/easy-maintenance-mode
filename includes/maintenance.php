@@ -15,6 +15,8 @@
 	<link rel="stylesheet" href="<?php echo plugins_url( 'admin/css/maintenance.css', dirname( __FILE__ ) ); ?>">
 
 	<title>Down for Maintenance | <?php echo esc_html( get_bloginfo( 'name' ) ); ?></title>
+	<script type="text/javascript" src="<?php echo plugins_url( 'admin/js/display-custom.js', dirname( __FILE__ ) ); ?>"></script>
+	<!-- Adding custom css -->
 	<style type="text/css">
 		body {
 			background: url(<?php echo esc_html( get_option( 'maintenance_mode_image' ) ) ?> ) ;
@@ -42,7 +44,12 @@
 		}
 
 	</style>
+
+	<!-- Adding jquery script -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Script to add countdown to the maintenance page -->
+
 	<script>
 	jQuery(document).ready(function(){
 	    function tick() {
@@ -73,7 +80,6 @@
 
   	    }
 
-
 	    document.getElementById("daysBox").textContent = days;
 	    document.getElementById("hoursBox").textContent = hours;
 	    document.getElementById("minsBox").textContent = minutes;
@@ -93,11 +99,20 @@
 
 
 <div id="container">
+
+	<!-- Show Maintenance Mode Logo -->
+
 	<header>
-		<img id="site-maintenance-logo" src="<?php echo esc_html( get_option( 'maintenance_mode_image_logo' ) ); ?>" width="30%" height="10%"></img>
+		<img class="site-maintenance-logo" src="<?php echo esc_html( get_option( 'maintenance_mode_image_logo' ) ); ?>" width="30%" height="10%"></img>
 	</header>
+
+	<!-- Show Maintenance Mode Title -->
+
 	<h3 class="title-style-handler"><?php echo esc_html( get_option( 'maintenance_mode_title' ) ); ?></h3>
 	<main>
+
+		<!-- Show Maintenance Mode Description -->
+
 		<p class="desc-style-handler"><?php echo esc_html( get_option('maintenance_mode_desc') ); ?></p>
 	</main>
 	<br />
@@ -111,6 +126,9 @@
 			<span id="secsBox"></span>
 		<span class="countdown-label" id="secsBox-label"></span>
 	</div>
+
+	<!-- Show Social Media Icons -->
+
 	<div class="social-icons-container">
 		<a href="<?php echo esc_url( get_option('mm_social_media_facebook') ) ?>" target="_blank">
 			<span class="fa-stack fa-2x facebook-stack" style="color: #3b5998">
@@ -143,74 +161,6 @@
 			</span>
 		</a>
 	</div>
-	<?php 
-		$facebook = esc_url( get_option('mm_social_media_facebook') );
-		$twitter = esc_url( get_option('mm_social_media_twitter') );
-		$youtube = esc_url( get_option('mm_social_media_youtube') );
-		$linkedin = esc_url( get_option('mm_social_media_linkedin') );
-		$googleplus = esc_url( get_option('mm_social_media_googleplus') );
-		$logo = esc_html( get_option( 'maintenance_mode_image_logo' ) );
-		
-		if( $logo = '' ){
-			?>
-			<style>
-			#site-maintenance-logo {
-				display: none;
-			}
-			</style>
-			<?php
-		}
-		if( $facebook == '' ){
-			?>
-			<style>
-				.facebook-stack {
-					display: none
-				}
-			</style>
-			<?php
-		}
-		if ( $googleplus == '' ){
-			?>
-			<style>
-				.googleplus-stack {
-					display: none
-				}
-			</style>
-			<?php
-
-		}
-		if ( $twitter == '' ){
-			?>
-			<style>
-				.twitter-stack {
-					display: none
-				}
-			</style>
-			<?php
-
-		}
-		if ( $linkedin == '' ){
-			?>
-			<style>
-				.linkedin-stack {
-					display: none
-				}
-			</style>
-			<?php
-
-		}
-		if ( $youtube == '' ){
-			?>
-			<style>
-				.youtube-stack {
-					display: none
-				}
-			</style>
-			<?php
-
-		}
-
-?>
 </div>
 
 </body>

@@ -6,12 +6,21 @@
 *
 */
 
+
+// Create Class Shortcode
+
 class Shortcode {
+
+// Create a public constructor function
 
 	public function __construct() {
 		add_shortcode( 'mm-countdown', array( $this, 'maintenance_mode_shortcode') );
-
 	}
+
+/*
+Function Name: maintenance_mode_shortcode
+function Description: This function will get/set the values of shortcode
+*/
 
 	function maintenance_mode_shortcode( $atts, $content = null ) {
 
@@ -24,7 +33,10 @@ class Shortcode {
 				), $atts
 			);
 	?>
-		<script>
+
+	<!-- Jquery Script for Countdown  -->
+
+	<script>
 	jQuery(document).ready(function(){
 	    function tick() {
 	   	var title = "<?php echo $atts['title'] ?>";
@@ -60,8 +72,10 @@ class Shortcode {
     setInterval(tick, 1000);    
  	});
  	</script>
-	<form>
 
+ 	<!-- Here is the form where the countdown is to be shown -->
+
+	<form>
 		<div class="countdown-output">
 		<h3 id="countdown-title"></h3>
 			<span id="daysBox"></span>
@@ -78,5 +92,8 @@ class Shortcode {
 <?php
 	}
 }
+
+// Create object of class
+
 new Shortcode
 ?>
