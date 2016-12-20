@@ -29,7 +29,5 @@ Features
 2. Activate the plugin through the 'Plugins' screen in WordPress
 3. Use the Admin Panel->Easy Maintenance screen to configure the plugin
 
-== Changelog ==
-
 = 1.0.0 =
 * Initial release
