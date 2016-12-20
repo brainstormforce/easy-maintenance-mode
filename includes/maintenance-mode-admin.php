@@ -170,7 +170,7 @@ Function Description: This fucntion has all the setting that we want to display
                 <hr />
                 <?php settings_fields( 'maintenance_appearance_setting_image' ); ?>
                 <?php do_settings_sections( 'maintenance_appearance_setting_image' ); ?>
-                <?php wp_enqueue_script( 'maintenance_custom_js', plugins_url( 'admin/js/jquery.custom.js', __FILE__ ), array( 'jquery', 'wp-color-picker' ), '', true  ); ?>
+                <?php wp_enqueue_script( 'maintenance_custom_js', plugins_url( '../admin/js/jquery.custom.js', __FILE__ ), array( 'jquery', 'wp-color-picker' ), '', true  ); ?>
            
                     <table class="form-table">
                         

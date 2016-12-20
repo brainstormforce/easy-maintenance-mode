@@ -23,9 +23,8 @@ class Maintenance_Mode {
 // Create a constructor function
 
 	public function __construct() {
-	require_once plugin_dir_path( __FILE__ ).'maintenance-mode-scripts.php';
-	require_once plugin_dir_path( __FILE__ ).'maintenance-mode-admin.php';
-	require_once plugin_dir_path( __FILE__ ).'maintenance-mode-shortcode.php';
+	require_once plugin_dir_path( __FILE__ ).'includes/maintenance-mode-scripts.php';
+	require_once plugin_dir_path( __FILE__ ).'includes/maintenance-mode-admin.php';
 	add_action( 'admin_enqueue_scripts',  array( $this , 'color_picker_assets' ) );
 	}
 
