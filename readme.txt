@@ -1,9 +1,9 @@
 === Easy Maintenance Mode ===
-Contributors: brainstormforce, balachandark
-Donate link: https://www.brainstormforce.com/payment/
+Contributors: brainstormforce
+Donate link: https://www.paypal.me/BrainstormForce
 Tags: coming, soon, maintenance, mode, coming soon, maintenance mode, countdown, timer
 Requires at least: 4.6
-Tested up to: 4.7
+Tested up to: 5.0
 Stable tag: 1.0.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
